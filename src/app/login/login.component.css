@@ -1,0 +1,198 @@
+/* Main container */
+.main-container {
+    width: 1051px;
+    height: 604px;
+    position: absolute;
+    top: 59px;
+    left: 158px;
+    display: flex;
+    gap: 0px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+  }
+  
+  .expanded-container {
+    height: 750px;
+  }
+  
+  /* Left container */
+  .left-container {
+    width: 442px;
+    height: 604px;
+    gap: 0px;
+    position: relative;
+    background-color: #DBE9F6;
+    border-radius: 16px 0px 0px 16px;
+  }
+  
+  /* First image */
+  .first-image {
+    width: 117.68px;
+    height: 52px;
+    position: absolute;
+    top: 29px;
+    left: 28px;
+    gap: 0px;
+  }
+  
+  /* Second image */
+  .second-image {
+    width: 419px;
+    height: 550px;
+    position: absolute;
+    top: 80px;
+    left: 8px;
+    padding: 99.49px 19.01px 100.46px 46.27px;
+    gap: 0px;
+  }
+  
+  /* Right container */
+  .right-container {
+    flex-grow: 1;
+    position: relative;
+    background-color: white;
+    border-radius: 0px 16px 16px 0px;
+  }
+  
+  /* Form container */
+  .form-container {
+    width: 333px;
+    position: absolute;
+    top: 123px;
+    left: 115px;
+    gap: 24px;
+  }
+  
+  /* Heading: Login */
+  .form-heading {
+    height: 30px;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: left;
+  }
+  
+  /* Lines container */
+  .lines-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+  
+  /* Line 1 */
+  .line1 {
+    width: 165px;
+    height: 8px;
+    border-radius: 215px;
+    background: #0069D1;
+  }
+  
+  /* Line 2 */
+  .line2 {
+    width: 165px;
+    height: 8px;
+    border-radius: 215px;
+    background: #CFD0D4;
+  }
+  
+  .active-line {
+    background: #0069D1;
+  }
+  
+  /* Form group */
+  .form-group {
+    margin-top: 20px;
+  }
+  
+  .form-group label {
+    height: 18px;
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: left;
+    color: #0069D1;
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .form-group input {
+    width: 333px;
+    height: 44px;
+    padding: 8px;
+    border: 0px;
+    border-radius: 50px;
+    background-color: #E4ECEE;
+  }
+  
+  /* Next button */
+  .next-button {
+    width: 332px;
+    height: 38px;
+    padding: 10px 0px 0px 0px;
+    gap: 10px;
+    border-radius: 16px;
+    background: #0069D1;
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-top: 24px;
+  }
+  
+  /* Step 3 container */
+  .step3-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  /* Welcome Image */
+  .welcome-image {
+    width: 204px;
+    height: 204px;
+  }
+  
+  /* Welcome Text */
+  .welcome-text {
+    width: 100%;
+    font-family: Poppins, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0069D1;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Redirecting text */
+  .redirect-text {
+    width: 493px;
+    height: 48px;
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: #737E8A;
+    margin-top: 20px;
+  }
+
+  /* Error styles for input fields */
+.form-group.error input {
+    border: 2px solid red; /* Apply red border to input fields */
+  }
+  
+  /* Error message style */
+  .error-message {
+    color: red;
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    margin-top: 8px;
+    text-align: left;
+  }

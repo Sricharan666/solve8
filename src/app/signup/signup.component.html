@@ -1,0 +1,90 @@
+
+  <div class="main-container" [ngClass]="{'expanded-container': step === 2 || step === 3}">
+    <div class="left-container">
+      <img src="../../assets/Picture1.png" alt="First Image" class="first-image">
+      <img src="../../assets/Picture2.png" alt="Second Image" class="second-image">
+    </div>
+    <div class="right-container">
+      <div class="form-container">
+        <img src="../../assets/Picture3.png" alt="Go Back" (click)="backStep()" *ngIf="step === 2" class="goback-img">
+      <!-- Show heading and lines-container only if step is not 3 -->
+      <ng-container *ngIf="step !== 3">
+        <h2 class="form-heading">Create Account</h2>
+        <div class="lines-container">
+          <div class="line1"></div>
+          <div class="line2" [ngClass]="{'active-line': step === 2}"></div>
+        </div>
+      </ng-container>
+  
+        <form [formGroup]="signupForm">
+          <!-- Step 1 -->
+          <div *ngIf="step === 1">
+            <div class="form-group">
+              <label for="email">Enter Email ID:</label>
+              <input id="email" formControlName="email" type="email" placeholder="Email" />
+            </div>
+  
+            <div class="form-group">
+              <label for="fullname">Enter Full Name:</label>
+              <input id="fullname" formControlName="fullname" type="text" placeholder="Full Name" />
+            </div>
+  
+            <div class="form-group">
+              <label for="password">Create Password:</label>
+              <input id="password" formControlName="password" type="password" placeholder="Password" />
+            </div>
+            <span class="signup-text">Already a member? <a (click)="forsignup()" class="signup-link">login</a></span>
+
+            <button type="button" (click)="nextStep()" class="next-button">Continue</button>
+          </div>
+  
+          <!-- Step 2 -->
+          <div *ngIf="step === 2">
+            <div class="form-group">
+              <label for="orgName">Organization Name:</label>
+              <input id="orgName" formControlName="orgname" type="text" placeholder="Organization Name" />
+            </div>
+  
+            <div class="form-group">
+              <label for="orgId">Organization ID:</label>
+              <input id="orgId" formControlName="orgid" type="text" placeholder="Organization ID"/>
+              <div *ngIf="organizationError" class="error">{{ organizationError }}</div>
+            </div>
+  
+            <div class="form-group">
+              <label for="designation">Designation:</label>
+              <select id="designation" formControlName="designation">
+                <option *ngFor="let designation of designations" [value]="designation">{{ designation }}</option>
+              </select>
+            </div>
+  
+            <div class="form-group">
+              <label for="birthdate">Birthdate:</label>
+              <input id="birthdate" formControlName="birthdate" type="date" placeholder="Birthdate" />
+            </div>
+  
+            <div class="form-group">
+              <label for="city">City:</label>
+              <input id="city" formControlName="city" type="text" placeholder="City" />
+            </div>
+  
+            <div class="form-group">
+              <label for="pincode">Pincode:</label>
+              <input id="pincode" formControlName="pincode" type="text" placeholder="Pincode" />
+              <div *ngIf="signupForm.controls['pincode'].invalid && signupForm.controls['pincode'].touched" class="error">
+                Pincode must be exactly 6 digits.
+              </div>
+            </div>
+  
+            <button type="submit"  (click)="showWelcomeMessage()" class="next-button">Next</button>
+          </div>
+          <div *ngIf="step === 3" class="step3-container">
+            <img src="../../assets/Picture4.png" alt="Welcome Image" class="welcome-image">
+            <h2 class="welcome-text">Welcome to Solvei8!</h2>
+            <p class="redirect-text">Redirecting you to the Login screen. This might take a few seconds...</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

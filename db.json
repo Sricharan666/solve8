@@ -1,0 +1,55 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "Email": "sri@gmail.com",
+      "fullName": "sricharan G",
+      "Password": "cherry122",
+      "orgName": "tech mahindra",
+      "orgId": "ORG001",
+      "Designation": "Developer",
+      "birthDate": "1999-07-15",
+      "City": "warangal",
+      "Pincode": "506100"
+    },
+    {
+      "id": 3,
+      "Email": "ram@gmail.com",
+      "fullName": "rampandit",
+      "Password": "ramu1555",
+      "orgName": "infotech",
+      "orgId": "ORG002",
+      "Designation": "Developer",
+      "birthDate": "1999-07-15",
+      "City": "hyderabad",
+      "Pincode": "506001"
+    },
+    {
+      "id": 4,
+      "Email": "sanjana@gmail.com",
+      "fullName": "sanjana chowdary",
+      "Password": "chowdarys99",
+      "orgName": "infotech",
+      "orgId": "ORG002",
+      "Designation": "Developer",
+      "birthDate": "1999-07-15",
+      "City": "hyderabad",
+      "Pincode": "506001"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

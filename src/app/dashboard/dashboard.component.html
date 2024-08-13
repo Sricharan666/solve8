@@ -1,0 +1,19 @@
+<div class="dashboard-container" *ngIf="personData">
+    <div class="profile-header">
+      <img src="../../assets/Picture1.png" alt="Company Logo" class="logo"> <!-- Adjust the path to your logo -->
+      <h1 class="profile-title">Profile Information</h1>
+    </div>
+    
+    <div class="user-info">
+      <h2>User Details</h2>
+      <p><strong>Email:</strong> {{ personData.Email }}</p>
+      <p><strong>Full Name:</strong> {{ personData.fullName }}</p>
+      <p><strong>Organization Name:</strong> {{ personData.orgName }}</p>
+      <p><strong>Organization ID:</strong> {{ personData.orgId }}</p>
+      <p><strong>Designation:</strong> {{ personData.Designation }}</p>
+      <p><strong>Birth Date:</strong> {{ personData.birthDate }}</p>
+      <p><strong>City:</strong> {{ personData.City }}</p>
+      <p><strong>Pincode:</strong> {{ personData.Pincode }}</p>
+    </div>
+  </div>
+  

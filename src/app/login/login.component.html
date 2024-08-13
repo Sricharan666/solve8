@@ -1,0 +1,42 @@
+<div class="main-container">
+  <div class="left-container">
+    <img src="../../assets/Picture1.png" alt="First Image" class="first-image">
+    <img src="../../assets/Picture2.png" alt="Second Image" class="second-image">
+  </div>
+  <div class="right-container">
+    <div class="form-container">
+      <!-- Show heading and lines-container only if step is not 3 -->
+      <ng-container *ngIf="step !== 3">
+        <h2 class="form-heading">Welcome Back, John!</h2>
+      </ng-container>
+      <form [formGroup]="Formvalue">
+        <!-- Step 1 -->
+        <div *ngIf="step === 1">
+          <div class="form-group" [ngClass]="{'error': isError}">
+            <label for="email">Enter Email ID:</label>
+            <input id="email" formControlName="email" type="email" placeholder="Email" />
+          </div>
+
+          <div class="form-group" [ngClass]="{'error': isError}">
+            <label for="password">Enter Password:</label>
+            <input id="password" formControlName="password" type="password" placeholder="Password" />
+          </div>
+
+          <!-- Display error message -->
+          <p *ngIf="isError" class="error-message">{{ errorMessage }}</p>
+
+          <span class="signup-text">Not a member? <a (click)="forsignup()" class="signup-link">signup</a></span>
+
+          <button type="button" (click)="login()" class="next-button">Login</button>
+        </div>
+
+        <!-- Step 3 -->
+        <div *ngIf="step === 3" class="step3-container">
+          <img src="../../assets/Picture4.png" alt="Welcome Image" class="welcome-image">
+          <h2 class="welcome-text">Welcome Back!</h2>
+          <p class="redirect-text">Redirecting you to the Dashboard...</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
